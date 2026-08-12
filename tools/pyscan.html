@@ -1,115 +1,227 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8" />
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 <title>Port Scanner - DigitalCore Security Toolkit</title>
+
 <link rel="stylesheet" href="../styles.css" />
+
 <link rel="stylesheet" href="../docs.css" />
+
 </head>
+
 <body>
 
+
+
 <div class="bg-glow"></div>
+
 <div class="bg-grid"></div>
+
 <canvas id="particles"></canvas>
 
+
+
 <!-- nav -->
+
 <nav id="navbar">
+
   <a href="../index.html" class="brand">
+
     <span class="brand-mark">
+
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4v10l-9 4-9-4V7z"/><path d="M3 7l9 4 9-4"/><path d="M12 11v10"/></svg>
+
     </span>
+
     <span>DigitalCore<span style="color:var(--cyan)">.</span></span>
+
   </a>
+
   <div class="nav-links">
-    <a href="../index.html#features" data-en="Platform" data-vn="Ná»n táº£ng">Platform</a>
-    <a href="../index.html#roadmap" data-en="Roadmap" data-vn="Lá»™ trÃ¬nh">Roadmap</a>
-    <a href="../index.html#articles" data-en="Articles" data-vn="BÃ i viáº¿t">Articles</a>
-    <a href="../knowledge-base.html" data-en="Knowledge" data-vn="Kiáº¿n thá»©c">Knowledge</a>
-    <a href="../tools.html" data-en="Tools" data-vn="CÃ´ng cá»¥">Tools</a>
-    <a href="../docs.html" data-en="Docs" data-vn="TÃ i liá»‡u">Docs</a>
-    <a href="../about.html" data-en="About" data-vn="Vá» chÃºng tÃ´i">About</a>
-    <a href="../index.html#stats" data-en="Stats" data-vn="Sá»‘ liá»‡u">Stats</a>
+
+    <a href="../index.html#features" data-en="Platform" data-vn="Nền tảng">Platform</a>
+
+    <a href="../index.html#roadmap" data-en="Roadmap" data-vn="Lộ trình">Roadmap</a>
+
+    <a href="../index.html#articles" data-en="Articles" data-vn="Bài viết">Articles</a>
+
+    <a href="../knowledge-base.html" data-en="Knowledge" data-vn="Kiến thức">Knowledge</a>
+
+    <a href="../tools.html" data-en="Tools" data-vn="Công cụ">Tools</a>
+
+    <a href="../docs.html" data-en="Docs" data-vn="Tài liệu">Docs</a>
+
+    <a href="../about.html" data-en="About" data-vn="Về chúng tôi">About</a>
+
+    <a href="../index.html#stats" data-en="Stats" data-vn="Số liệu">Stats</a>
+
     <button class="lang-toggle" id="langToggle"><span class="dot"></span><span id="langLabel">VN</span></button>
+
   </div>
+
   <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+
 </nav>
+
 <div class="mobile-menu" id="mobileMenu">
-  <a href="../index.html#features" data-en="Platform" data-vn="Ná»n táº£ng">Platform</a>
-  <a href="../index.html#roadmap" data-en="Roadmap" data-vn="Lá»™ trÃ¬nh">Roadmap</a>
-  <a href="../index.html#articles" data-en="Articles" data-vn="BÃ i viáº¿t">Articles</a>
-  <a href="../knowledge-base.html" data-en="Knowledge" data-vn="Kiáº¿n thá»©c">Knowledge</a>
-  <a href="../tools.html" data-en="Tools" data-vn="CÃ´ng cá»¥">Tools</a>
-  <a href="../docs.html" data-en="Docs" data-vn="TÃ i liá»‡u">Docs</a>
-  <a href="../about.html" data-en="About" data-vn="Vá» chÃºng tÃ´i">About</a>
-  <a href="../index.html#stats" data-en="Stats" data-vn="Sá»‘ liá»‡u">Stats</a>
+
+  <a href="../index.html#features" data-en="Platform" data-vn="Nền tảng">Platform</a>
+
+  <a href="../index.html#roadmap" data-en="Roadmap" data-vn="Lộ trình">Roadmap</a>
+
+  <a href="../index.html#articles" data-en="Articles" data-vn="Bài viết">Articles</a>
+
+  <a href="../knowledge-base.html" data-en="Knowledge" data-vn="Kiến thức">Knowledge</a>
+
+  <a href="../tools.html" data-en="Tools" data-vn="Công cụ">Tools</a>
+
+  <a href="../docs.html" data-en="Docs" data-vn="Tài liệu">Docs</a>
+
+  <a href="../about.html" data-en="About" data-vn="Về chúng tôi">About</a>
+
+  <a href="../index.html#stats" data-en="Stats" data-vn="Số liệu">Stats</a>
+
 </div>
+
+
 
 <!-- content -->
+
 <div class="tools-wrap">
+
   <a href="../tools.html" class="doc-toplink">
+
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-    <span data-en="Back to tools page" data-vn="Quay láº¡i trang công cụ">Back to tools page</span>
+
+    <span data-en="Back to tools page" data-vn="Quay lại trang công cụ">Back to tools page</span>
+
   </a>
 
+
+
   <div class="doc-head">
+
     <span class="doc-eyebrow" data-en="PyScan" data-vn="PyScan">PyScan</span>
+
     <h1 data-en="Port Scanner" data-vn="Port scanner">Port Scanner</h1>
-    <p data-en="Advanced port scanner written in pure Python â€” SYN/TCP/UDP scans, service & version detection, OS guessing, deep SSL/TLS checks, and scan-history diffing for CI." data-vn="Port scanner nÃ¢ng cao viáº¿t báº±ng Python thuáº§n â€” SYN/TCP/UDP scan, phÃ¡t hiá»‡n dá»‹ch vá»¥ vÃ  phiÃªn báº£n, Ä‘oÃ¡n OS, kiá»ƒm tra SSL/TLS sÃ¢u vÃ  so sÃ¡nh lá»‹ch sá»­ scan cho CI.">Advanced port scanner written in pure Python â€” SYN/TCP/UDP scans, service and version detection, OS guessing, deep SSL/TLS checks, and scan-history diffing for CI.</p>
+
+    <p data-en="Advanced port scanner written in pure Python — SYN/TCP/UDP scans, service & version detection, OS guessing, deep SSL/TLS checks, and scan-history diffing for CI." data-vn="Port scanner nâng cao viết bằng Python thuần — SYN/TCP/UDP scan, phát hiện dịch vụ và phiên bản, đoán OS, kiểm tra SSL/TLS sâu và so sánh lịch sử scan cho CI.">Advanced port scanner written in pure Python — SYN/TCP/UDP scans, service and version detection, OS guessing, deep SSL/TLS checks, and scan-history diffing for CI.</p>
+
   </div>
+
+
 
   <section class="tool-group" id="recon">
+
     <h2><span class="idx" data-en="01" data-vn="01">01</span><span data-en="Port Scanner" data-vn="Port scanner">Port scanner</span></h2>
+
       <div class="tool-usage">
-    <span class="tool-usage-badge" data-en="Usage" data-vn="CÃ¡ch dÃ¹ng">Usage</span>
-    <p data-en="This example has 4 parameters." data-vn="Lá»‡nh máº«u nÃ y cÃ³ 4 tham sá»‘.">This example has 4 parameters.</p>
+
+    <span class="tool-usage-badge" data-en="Usage" data-vn="Cách dùng">Usage</span>
+
+    <p data-en="This example has 4 parameters." data-vn="Lệnh mẫu này có 4 tham số.">This example has 4 parameters.</p>
+
     <ul class="tool-usage-list">
-      <li data-en="-sT: run a TCP connect scan" data-vn="-sT: quÃ©t TCP connect">-sT: run a TCP connect scan</li>
-      <li data-en="-sV: detect service and version information" data-vn="-sV: phÃ¡t hiá»‡n dá»‹ch vá»¥ vÃ  phiÃªn báº£n">-sV: detect service and version information</li>
-      <li data-en="-p 1-1000: scan ports 1 through 1000" data-vn="-p 1-1000: quÃ©t cá»•ng tá»« 1 Ä‘áº¿n 1000">-p 1-1000: scan ports 1 through 1000</li>
-      <li data-en="example.com: target host to scan" data-vn="example.com: mÃ¡y chá»§ má»¥c tiÃªu cáº§n quÃ©t">example.com: target host to scan</li>
+
+      <li data-en="-sT: run a TCP connect scan" data-vn="-sT: quét TCP connect">-sT: run a TCP connect scan</li>
+
+      <li data-en="-sV: detect service and version information" data-vn="-sV: phát hiện dịch vụ và phiên bản">-sV: detect service and version information</li>
+
+      <li data-en="-p 1-1000: scan ports 1 through 1000" data-vn="-p 1-1000: quét cổng từ 1 đến 1000">-p 1-1000: scan ports 1 through 1000</li>
+
+      <li data-en="example.com: target host to scan" data-vn="example.com: máy chủ mục tiêu cần quét">example.com: target host to scan</li>
+
     </ul>
+
   </div>
-    <p data-en="A collection of pure-Python tools written by the Digital Core team â€” recon, web security, secrets, passwords, logs, and dependency scanning. Python 3.10+ is all you need for the core features; optional libraries unlock raw scans and advanced crypto checks." data-vn="Bá»™ cÃ´ng cá»¥ viáº¿t báº±ng Python thuáº§n cá»§a Digital Core team â€” dÃ² quÃ©t, báº£o máº­t web, bÃ­ máº­t, máº­t kháº©u, log vÃ  quÃ©t phá»¥ thuá»™c. Chá»‰ cáº§n Python 3.10+ cho cÃ¡c chá»©c nÄƒng cá»‘t lÃµi; thÆ° viá»‡n tÃ¹y chá»n má»Ÿ khÃ³a scan raw vÃ  kiá»ƒm tra máº­t mÃ£ nÃ¢ng cao.">A collection of pure-Python tools written by the Digital Core team â€” recon, web security, secrets, passwords, logs, and dependency scanning. Python 3.10+ is all you need for the core features; optional libraries unlock raw scans and advanced crypto checks.</p>
-    <a href="./pyscan.py" download class="tc-dl" style="margin-top:12px; display:inline-block;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg><span data-en="Download Tool" data-vn="Táº£i CÃ´ng cá»¥">Download Tool</span></a>
+
+    <p data-en="A collection of pure-Python tools written by the Digital Core team — recon, web security, secrets, passwords, logs, and dependency scanning. Python 3.10+ is all you need for the core features; optional libraries unlock raw scans and advanced crypto checks." data-vn="Bộ công cụ viết bằng Python thuần của Digital Core team — dò quét, bảo mật web, bí mật, mật khẩu, log và quét phụ thuộc. Chỉ cần Python 3.10+ cho các chức năng cốt lõi; thư viện tùy chọn mở khóa scan raw và kiểm tra mật mã nâng cao.">A collection of pure-Python tools written by the Digital Core team — recon, web security, secrets, passwords, logs, and dependency scanning. Python 3.10+ is all you need for the core features; optional libraries unlock raw scans and advanced crypto checks.</p>
+
+    <a href="./pyscan.py" download class="tc-dl" style="margin-top:12px; display:inline-block;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg><span data-en="Download Tool" data-vn="Tải Công cụ">Download Tool</span></a>
+
   </section>
 
+
+
   <footer>
+
     <div class="footer-bottom">
-      <span>Â© 2026 DigitalCore Team. <span data-en="All rights reserved." data-vn="Báº£o lÆ°u má»i quyá»n.">All rights reserved.</span></span>
-      <span class="status-line"><span class="led"></span><span data-en="Toolkit: up to date" data-vn="Bá»™ cÃ´ng cá»¥: Ä‘Ã£ cáº­p nháº­t">Toolkit: up to date</span></span>
-      <a href="../tools.html" data-en="Back to tools page" data-vn="Quay láº¡i trang công cụ">Back to tools page</a>
+
+      <span>© 2026 DigitalCore Team. <span data-en="All rights reserved." data-vn="Bảo lưu mọi quyền.">All rights reserved.</span></span>
+
+      <span class="status-line"><span class="led"></span><span data-en="Toolkit: up to date" data-vn="Bộ công cụ: đã cập nhật">Toolkit: up to date</span></span>
+
+      <a href="../tools.html" data-en="Back to tools page" data-vn="Quay lại trang công cụ">Back to tools page</a>
+
     </div>
+
   </footer>
+
 </div>
 
+
+
 <script>
+
 (function () {
+
   "use strict";
+
   var canvas = document.getElementById("particles");
+
   var ctx = canvas.getContext("2d");
+
   var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
   var W, H, parts = [], links = [], raf;
+
   function resize() { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
+
   function seed() { parts = []; var count = Math.min(70, Math.floor(W * H / 22000)); for (var i = 0; i < count; i++) parts.push({ x: Math.random() * W, y: Math.random() * H, vx: (Math.random() - 0.5) * 0.3, vy: (Math.random() - 0.5) * 0.3, r: Math.random() * 1.4 + 0.5 }); links = []; for (var j = 0; j < count; j++) links.push({ a: j, b: Math.floor(Math.random() * count) }); }
+
   function draw() { ctx.clearRect(0, 0, W, H); ctx.lineWidth = 0.6; for (var i = 0; i < links.length; i++) { var pa = parts[links[i].a], pb = parts[links[i].b]; var dx = pa.x - pb.x, dy = pa.y - pb.y; var dist = Math.sqrt(dx * dx + dy * dy); if (dist < 170) { var alpha = (1 - dist / 170) * 0.3; var grad = ctx.createLinearGradient(pa.x, pa.y, pb.x, pb.y); grad.addColorStop(0, "rgba(0,234,255," + alpha + ")"); grad.addColorStop(1, "rgba(47,123,255," + alpha + ")"); ctx.strokeStyle = grad; ctx.beginPath(); ctx.moveTo(pa.x, pa.y); ctx.lineTo(pb.x, pb.y); ctx.stroke(); } } for (var j = 0; j < parts.length; j++) { var p = parts[j]; p.x += p.vx; p.y += p.vy; if (p.x < 0 || p.x > W) p.vx *= -1; if (p.y < 0 || p.y > H) p.vy *= -1; ctx.fillStyle = "rgba(0,234,255,0.5)"; ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2); ctx.fill(); } raf = requestAnimationFrame(draw); }
+
   if (reduced) { resize(); }
+
   else { resize(); seed(); draw(); }
+
   window.addEventListener("resize", function () { resize(); if (reduced) return; seed(); });
 
+
+
   var burger = document.getElementById("hamburger");
+
   var menu = document.getElementById("mobileMenu");
+
   burger.addEventListener("click", function () { burger.classList.toggle("open"); menu.classList.toggle("open"); });
+
   menu.querySelectorAll("a").forEach(function (a) { a.addEventListener("click", function () { burger.classList.remove("open"); menu.classList.remove("open"); }); });
 
-  var langBtn = document.getElementById("langToggle");
-  var langLabel = document.getElementById("langLabel");
-  var currentLang = "en";
-  function setLang(lang) { currentLang = lang; var attr = "data-" + lang; document.querySelectorAll("[" + attr + "]").forEach(function (el) { var txt = el.getAttribute(attr); if (txt !== null && txt !== "") el.innerHTML = txt; }); langLabel.textContent = lang === "en" ? "VN" : "EN"; document.documentElement.lang = lang; try { localStorage.setItem("dc-lang", lang); } catch (e) {} }
-  langBtn.addEventListener("click", function () { setLang(currentLang === "en" ? "vn" : "en"); });
-  var saved = null; try { saved = localStorage.getItem("dc-lang"); } catch (e) {} if (saved === "vn") setLang("vn");
-})();
-</script>
-</body>
-</html>
 
+
+  var langBtn = document.getElementById("langToggle");
+
+  var langLabel = document.getElementById("langLabel");
+
+  var currentLang = "en";
+
+  function setLang(lang) { currentLang = lang; var attr = "data-" + lang; document.querySelectorAll("[" + attr + "]").forEach(function (el) { var txt = el.getAttribute(attr); if (txt !== null && txt !== "") el.innerHTML = txt; }); langLabel.textContent = lang === "en" ? "VN" : "EN"; document.documentElement.lang = lang; try { localStorage.setItem("dc-lang", lang); } catch (e) {} }
+
+  langBtn.addEventListener("click", function () { setLang(currentLang === "en" ? "vn" : "en"); });
+
+  var saved = null; try { saved = localStorage.getItem("dc-lang"); } catch (e) {} if (saved === "vn") setLang("vn");
+
+})();
+
+</script>
+
+</body>
+
+</html>
