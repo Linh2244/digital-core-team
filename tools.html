@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<title>Tool Database — DigitalCore Team</title>
+<meta name="description" content="The DigitalCore Security Toolkit — a collection of pure-Python tools for recon, web security, secrets, passwords, logs, and dependency scanning." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="docs.css" />
+<link rel="stylesheet" href="tools.css" />
+</head>
+<body>
+
+<div class="bg-glow"></div>
+<div class="bg-grid"></div>
+<canvas id="particles"></canvas>
+
+<!-- nav -->
+<nav id="navbar">
+  <a href="index.html" class="brand">
+    <span class="brand-mark">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4v10l-9 4-9-4V7z"/><path d="M3 7l9 4 9-4"/><path d="M12 11v10"/></svg>
+    </span>
+    <span>DigitalCore<span style="color:var(--cyan)">.</span></span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html#features" data-en="Platform" data-vn="Nền tảng">Platform</a>
+    <a href="index.html#roadmap" data-en="Roadmap" data-vn="Lộ trình">Roadmap</a>
+    <a href="index.html#articles" data-en="Articles" data-vn="Bài viết">Articles</a>
+    <a href="knowledge-base.html" data-en="Knowledge" data-vn="Kiến thức">Knowledge</a>
+    <a href="tools.html" class="active" data-en="Tools" data-vn="Công cụ">Tools</a>
+    <a href="docs.html" data-en="Docs" data-vn="Tài liệu">Docs</a>
+    <a href="about.html" data-en="About" data-vn="Về chúng tôi">About</a>
+    <a href="index.html#stats" data-en="Stats" data-vn="Số liệu">Stats</a>
+    <button class="lang-toggle" id="langToggle"><span class="dot"></span><span id="langLabel">VN</span></button>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html#features" data-en="Platform" data-vn="Nền tảng">Platform</a>
+  <a href="index.html#roadmap" data-en="Roadmap" data-vn="Lộ trình">Roadmap</a>
+  <a href="index.html#articles" data-en="Articles" data-vn="Bài viết">Articles</a>
+  <a href="knowledge-base.html" data-en="Knowledge" data-vn="Kiến thức">Knowledge</a>
+  <a href="tools.html" class="active" data-en="Tools" data-vn="Công cụ">Tools</a>
+  <a href="docs.html" data-en="Docs" data-vn="Tài liệu">Docs</a>
+  <a href="about.html" data-en="About" data-vn="Về chúng tôi">About</a>
+  <a href="index.html#stats" data-en="Stats" data-vn="Số liệu">Stats</a>
+</div>
+
+<!-- content -->
+<div class="tools-wrap">
+  <a href="index.html" class="doc-toplink">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    <span data-en="Back to home" data-vn="Quay lại trang chủ">Back to home</span>
+  </a>
+
+  <div class="doc-head">
+    <span class="doc-eyebrow" data-en="Tool Database" data-vn="Cơ sở dữ liệu Công cụ">Tool Database</span>
+    <h1 data-en="DigitalCore Security Toolkit" data-vn="Bộ công cụ Bảo mật DigitalCore">DigitalCore Security Toolkit</h1>
+    <p data-en="A collection of pure-Python tools written by the Digital Core team — recon, web security, secrets, passwords, logs, and dependency scanning. Python 3.10+ is all you need for the core features; optional libraries unlock raw scans and advanced crypto checks." data-vn="Bộ công cụ viết bằng Python thuần của Digital Core team — dò quét, bảo mật web, bí mật, mật khẩu, log và quét phụ thuộc. Chỉ cần Python 3.10+ cho các chức năng cốt lõi; thư viện tùy chọn mở khóa scan raw và kiểm tra mật mã nâng cao.">A collection of pure-Python tools written by the Digital Core team — recon, web security, secrets, passwords, logs, and dependency scanning. Python 3.10+ is all you need for the core features; optional libraries unlock raw scans and advanced crypto checks.</p>
+  </div>
+
+  <!-- 01 recon -->
+  <section class="tool-group" id="recon">
+    <h2><span class="idx" data-en="01" data-vn="01">01</span><span data-en="Recon &amp; Network" data-vn="Dò quét &amp; Mạng">Recon &amp; Network</span></h2>
+    <div class="tool-grid">
+      <div class="tool-card">
+        <div class="tc-head">
+          <div class="tc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v3l2 1"/></svg></div>
+          <div class="tc-id"><div class="tc-title">pyscan.py</div><span class="tc-cat" data-en="Port scanner" data-vn="Port scanner">Port scanner</span></div>
+        </div>
+        <p class="tc-desc" data-en="Advanced port scanner — SYN/TCP/UDP scans, service and version detection, OS guessing, deep SSL/TLS checks, and scan-history diffing for CI." data-vn="Port scanner nâng cao — SYN/TCP/UDP scan, phát hiện dịch vụ và phiên bản, đoán OS, kiểm tra SSL/TLS sâu và so sánh lịch sử scan cho CI.">Advanced port scanner — SYN/TCP/UDP scans, service and version detection, OS guessing, deep SSL/TLS checks, and scan-history diffing for CI.</p>
+        <code class="tc-cmd"><span class="kw">python</span> pyscan.py -sT -sV -p 1-1000 example.com</code>
+        <a href="tools/pyscan.py" download class="tc-dl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg><span data-en="Download Tool" data-vn="Tải Công cụ">Download Tool</span></a>
+      </div>
+      <div class="tool-card">
+        <div class="tc-head">
+          <div class="tc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg></div>
+          <div class="tc-id"><div class="tc-title">dnslookup.py</div><span class="tc-cat" data-en="DNS lookup" data-vn="Tra cứu DNS">DNS lookup</span></div>
+        </div>
+        <p class="tc-desc" data-en="Full dig-style DNS lookup in pure Python — every record type, DNSSEC, root-to-authoritative tracing, TCP/EDNS, reverse lookup, and JSON output." data-vn="Tra cứu DNS kiểu dig bằng Python thuần — mọi loại bản ghi, DNSSEC, truy vết root đến authoritative, TCP/EDNS, tra ngược và xuất JSON.">Full dig-style DNS lookup in pure Python — every record type, DNSSEC, root-to-authoritative tracing, TCP/EDNS, reverse lookup, and JSON output.</p>
+        <code class="tc-cmd"><span class="kw">python</span> dnslookup.py example.com --mx --trace</code>
+        <a href="tools/dnslookup.py" download class="tc-dl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg><span data-en="Download Tool" data-vn="Tải Công cụ">Download Tool</span></a>
+      </div>
+      <div class="tool-card">
+        <div class="tc-head">
+          <div class="tc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/></svg></div>
+          <div class="tc-id"><div class="tc-title">subfind.py</div><span class="tc-cat" data-en="Subdomain finder" data-vn="Tìm tên miền con">Subdomain finder</span></div>
+        </div>
+        <p class="tc-desc" data-en="Finds subdomains via Certificate Transparency (crt.sh), DNS brute-force with wildcard filtering, and zone transfer (AXFR) — with A/AAAA resolution." data-vn="Tìm tên miền con qua Certificate Transparency (crt.sh), brute-force DNS có lọc wildcard và zone transfer (AXFR) — kèm phân giải A/AAAA.">Finds subdomains via Certificate Transparency (crt.sh), DNS brute-force with wildcard filtering, and zone transfer (AXFR) — with A/AAAA resolution.</p>
+        <code class="tc-cmd"><span class="kw">python</span> subfind.py example.com --top 200 --axfr --resolve</code>
+        <a href="tools/subfind.py" download class="tc-dl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg><span data-en="Download Tool" data-vn="Tải Công cụ">Download Tool</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 web security -->
+  <section class="tool-group" id="web">
+    <h2><span class="idx" data-en="02" data-vn="02">02</span><span data-en="Web Security" data-vn="Bảo mật Web">Web Security</span></h2>
+    <div class="tool-grid">
+      <div class="tool-card">
+        <div class="tc-head">
+          <div class="tc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-3 8-10V5l-8-3-8 3v7c0 7 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <div class="tc-id"><div class="tc-title">httpsec.py</div><span class="tc-cat" data-en="HTTP scan" data-vn="Quét HTTP">HTTP scan</span></div>
+        </div>
+        <p class="tc-desc" data-en="HTTP security scanner — checks TLS, headers, cookies, methods, sensitive paths, CORS, and redirects, then scores the target 0–100 with an A–F rating." data-vn="Quét bảo mật HTTP — kiểm tra TLS, headers, cookies, methods, đường dẫn nhạy cảm, CORS và redirect, rồi chấm điểm 0–100 kèm xếp hạng A–F.">HTTP security scanner — checks TLS, headers, cookies, methods, sensitive paths, CORS, and redirects, then scores the target 0–100 with an A–F rating.</p>
+        <code class="tc-cmd"><span class="kw">python</span> httpsec.py --active -oJ report.json https://example.com</code>
+        <a href="tools/httpsec.py" download class="tc-dl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg><span data-en="Download Tool" data-vn="Tải Công cụ">Download Tool</span></a>
+      </div>
+      <div class="tool-card">
+        <div class="tc-head">
+          <div class="tc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4v10l-9 4-9-4V7z"/><path d="M3 7l9 4 9-4"/><path d="M12 11v10"/></svg></div>
+          <div class="tc-id"><div class="tc-title">dirbf.py</div><span class="tc-cat" data-en="Dir brute-force" data-vn="Brute-force thư mục">Dir brute-force</span></div>
+        </div>
+        <p class="tc-desc" data-en="Web directory and file brute-forcer — 269 built-in paths, custom wordlists, auto file extensions, status-code filtering, redirect capture, and JSON output." data-vn="Brute-force thư mục/file trên web — 269 đường dẫn tích hợp, wordlist tùy chỉnh, tự thêm đuôi file, lọc status code, bắt redirect và xuất JSON.">Web directory and file brute-forcer — 269 built-in paths, custom wordlists, auto file extensions, status-code filtering, redirect capture, and JSON output.</p>
+        <code class="tc-cmd"><span class="kw">python</span> dirbf.py -w big.txt -x php http://example.com</code>
+        <a href="tools/dirbf.py" download class="tc-dl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg><span data-en="Download Tool" data-vn="Tải Công cụ">Download Tool</span></a>
+      </div>
+      <div class="tool-card">
+        <div class="tc-head">
+          <div class="tc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/><circle cx="12" cy="16" r="1.5"/></svg></div>
+          <div class="tc-id"><div class="tc-title">loginbf.py</div><span class="tc-cat" data-en="Login brute-force" data-vn="Brute-force đăng nhập">Login brute-force</span></div>
+        </div>
+        <p class="tc-desc" data-en="Tests username/password combos against login endpoints — HTTP Basic Auth, POST form, JSON, or query string — with success detection by status code or body text." data-vn="Thử tổ hợp username/password trên endpoint đăng nhập — HTTP Basic Auth, POST form, JSON hoặc query string — nhận diện thành công theo status code hoặc chuỗi trong body.">Tests username/password combos against login endpoints — HTTP Basic Auth, POST form, JSON, or query string — with success detection by status code or body text.</p>
+        <code class="tc-cmd"><span class="kw">python</span> loginbf.py --basic -U users.txt -P pass.txt http://example.com/login</code>
+        <a href="tools/loginbf.py" download class="tc-dl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg><span data-en="Download Tool" data-vn="Tải Công cụ">Download Tool</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 secrets & tokens -->
+  <section class="tool-group" id="secrets">
+    <h2><span class="idx" data-en="03" data-vn="03">03</span><span data-en="Secrets &amp; Tokens" data-vn="Bí mật &amp; Token">Secrets &amp; Tokens</span></h2>
+    <div class="tool-grid">
+      <div class="tool-card">
+        <div class="tc-head">
+          <div class="tc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg></div>
+          <div class="tc-id"><div class="tc-title">secretscan.py</div><span class="tc-cat" data-en="Secret scanner" data-vn="Quét bí mật">Secret scanner</span></div>
+        </div>
+        <p class="tc-desc" data-en="Scans source code for leaked secrets — API keys, tokens, JWT, private keys, passwords, connection strings — with entropy filtering and allowlists to cut noise." data-vn="Quét mã nguồn tìm bí mật bị lộ — khóa API, token, JWT, private key, mật khẩu, connection string — lọc nhiễu bằng entropy Shannon và allowlist.">Scans source code for leaked secrets — API keys, tokens, JWT, private keys, passwords, connection strings — with entropy filtering and allowlists to cut noise.</p>
+        <code class="tc-cmd"><span class="kw">python</span> secretscan.py . --min-severity HIGH --short</code>
+        <a href="tools/secretscan.py" download class="tc-dl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg><span data-en="Download Tool" data-vn="Tải Công cụ">Download Tool</span></a>
+      </div>
+      <div class="tool-card">
+        <div class="tc-head">
+          <div class="tc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg></div>
+          <div class="tc-id"><div class="tc-title">jwtcheck.py</div><span class="tc-cat" data-en="JWT inspector" data-vn="Kiểm tra JWT">JWT inspector</span></div>
+        </div>
+        <p class="tc-desc" data-en="Decodes and audits JWTs — flags alg:none, algorithm confusion, weak HMAC secrets, and key injection, then verifies signatures with a secret or public key." data-vn="Giải mã và kiểm tra JWT — phát hiện alg:none, algorithm confusion, HMAC secret yếu và key injection, rồi xác thực chữ ký bằng secret hoặc public key.">Decodes and audits JWTs — flags alg:none, algorithm confusion, weak HMAC secrets, and key injection, then verifies signatures with a secret or public key.</p>
+        <code class="tc-cmd"><span class="kw">python</span> jwtcheck.py --secret S3cr3t "eyJhbGciOiJIUzI1NiJ9..."</code>
+        <a href="tools/jwtcheck.py" download class="tc-dl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg><span data-en="Download Tool" data-vn="Tải Công cụ">Download Tool</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 passwords -->
+  <section class="tool-group" id="passwords">
+    <h2><span class="idx" data-en="04" data-vn="04">04</span><span data-en="Passwords &amp; Hashes" data-vn="Mật khẩu &amp; Hash">Passwords &amp; Hashes</span></h2>
+    <div class="tool-grid">
+      <div class="tool-card">
+        <div class="tc-head">
+          <div class="tc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+          <div class="tc-id"><div class="tc-title">pwgen.py</div><span class="tc-cat" data-en="Password generator" data-vn="Sinh mật khẩu">Password generator</span></div>
+        </div>
+        <p class="tc-desc" data-en="Cryptographically secure password and passphrase generator built on the secrets module, with strength checks, entropy stats, and JSON output." data-vn="Sinh mật khẩu/passphrase an toàn mật mã dựa trên module secrets, kèm kiểm tra độ mạnh, thống kê entropy và xuất JSON.">Cryptographically secure password and passphrase generator built on the secrets module, with strength checks, entropy stats, and JSON output.</p>
+        <code class="tc-cmd"><span class="kw">python</span> pwgen.py -c 5 -l 20 --no-ambig</code>
+        <a href="tools/pwgen.py" download class="tc-dl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg><span data-en="Download Tool" data-vn="Tải Công cụ">Download Tool</span></a>
+      </div>
+      <div class="tool-card">
+        <div class="tc-head">
+          <div class="tc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+          <div class="tc-id"><div class="tc-title">pwcheck.py</div><span class="tc-cat" data-en="Strength checker" data-vn="Kiểm tra độ mạnh">Strength checker</span></div>
+        </div>
+        <p class="tc-desc" data-en="zxcvbn-style password analysis — common passwords, leetspeak, keyboard patterns, sequences, dates — with crack-time estimates and WEAK-to-VERY-STRONG ratings." data-vn="Phân tích độ mạnh mật khẩu kiểu zxcvbn — mật khẩu phổ biến, leetspeak, mẫu bàn phím, chuỗi, năm — kèm thời gian bẻ khóa và xếp hạng YẾU–RẤT MẠNH.">zxcvbn-style password analysis — common passwords, leetspeak, keyboard patterns, sequences, dates — with crack-time estimates and WEAK-to-VERY-STRONG ratings.</p>
+        <code class="tc-cmd"><span class="kw">python</span> pwcheck.py "Tr0ub4dor&amp;3" --json</code>
+        <a href="tools/pwcheck.py" download class="tc-dl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg><span data-en="Download Tool" data-vn="Tải Công cụ">Download Tool</span></a>
+      </div>
+      <div class="tool-card">
+        <div class="tc-head">
+          <div class="tc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a5 5 0 0 1 5 5c0 2-1 3-1 3h8l-2.4 7.2a2 2 0 0 1-1.9 1.3H4.3a2 2 0 0 1-1.9-1.3L0 10h8s-1-1-1-3a5 5 0 0 1 5-5z"/><path d="M2 21h20"/></svg></div>
+          <div class="tc-id"><div class="tc-title">hashid.py</div><span class="tc-cat" data-en="Hash identifier" data-vn="Nhận diện hash">Hash identifier</span></div>
+        </div>
+        <p class="tc-desc" data-en="Identifies hash types by length, charset, and prefix — lists possible hashes with hashcat (-m) and John the Ripper formats, ready for cracking." data-vn="Nhận diện loại hash theo độ dài, bộ ký tự và prefix — liệt kê loại khả dĩ kèm hashcat mode (-m) và John the Ripper format, sẵn sàng bẻ khóa.">Identifies hash types by length, charset, and prefix — lists possible hashes with hashcat (-m) and John the Ripper formats, ready for cracking.</p>
+        <code class="tc-cmd"><span class="kw">python</span> hashid.py --short e99a18c428cb38d5f260853678922e03</code>
+        <a href="tools/hashid.py" download class="tc-dl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg><span data-en="Download Tool" data-vn="Tải Công cụ">Download Tool</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 logs -->
+  <section class="tool-group" id="logs">
+    <h2><span class="idx" data-en="05" data-vn="05">05</span><span data-en="Logs &amp; Monitoring" data-vn="Log &amp; Giám sát">Logs &amp; Monitoring</span></h2>
+    <div class="tool-grid">
+      <div class="tool-card">
+        <div class="tc-head">
+          <div class="tc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+          <div class="tc-id"><div class="tc-title">logsec.py</div><span class="tc-cat" data-en="Log analyzer" data-vn="Phân tích log">Log analyzer</span></div>
+        </div>
+        <p class="tc-desc" data-en="Analyzes web and SSH logs for threats — SQLi, XSS, LFI, brute-force, scanners — with severity ratings, JSON/CSV output, and CI-friendly exit codes." data-vn="Phân tích log web/SSH phát hiện mối đe dọa — SQLi, XSS, LFI, brute-force, scanner — gán mức độ nghiêm trọng, xuất JSON/CSV và exit code thân thiện với CI.">Analyzes web and SSH logs for threats — SQLi, XSS, LFI, brute-force, scanners — with severity ratings, JSON/CSV output, and CI-friendly exit codes.</p>
+        <code class="tc-cmd"><span class="kw">python</span> logsec.py access.log --threats-only --exit-on HIGH</code>
+        <a href="tools/logsec.py" download class="tc-dl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg><span data-en="Download Tool" data-vn="Tải Công cụ">Download Tool</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 tls & dependencies -->
+  <section class="tool-group" id="tls">
+    <h2><span class="idx" data-en="06" data-vn="06">06</span><span data-en="TLS &amp; Dependencies" data-vn="TLS &amp; Phụ thuộc">TLS &amp; Dependencies</span></h2>
+    <div class="tool-grid">
+      <div class="tool-card">
+        <div class="tc-head">
+          <div class="tc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-3 8-10V5l-8-3-8 3v7c0 7 8 10 8 10z"/><path d="M7 11l2 2 4-4"/></svg></div>
+          <div class="tc-id"><div class="tc-title">tlscheck.py</div><span class="tc-cat" data-en="TLS checker" data-vn="Kiểm tra TLS">TLS checker</span></div>
+        </div>
+        <p class="tc-desc" data-en="Checks TLS protocol versions, ciphers, and certificates on any service — HTTPS, SMTP, IMAP, LDAPS, and more — with JSON output." data-vn="Kiểm tra phiên bản protocol, cipher và chứng chỉ TLS trên bất kỳ dịch vụ nào — HTTPS, SMTP, IMAP, LDAPS... — xuất JSON.">Checks TLS protocol versions, ciphers, and certificates on any service — HTTPS, SMTP, IMAP, LDAPS, and more — with JSON output.</p>
+        <code class="tc-cmd"><span class="kw">python</span> tlscheck.py --json example.com:443</code>
+        <a href="tools/tlscheck.py" download class="tc-dl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg><span data-en="Download Tool" data-vn="Tải Công cụ">Download Tool</span></a>
+      </div>
+      <div class="tool-card">
+        <div class="tc-head">
+          <div class="tc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
+          <div class="tc-id"><div class="tc-title">depcheck.py</div><span class="tc-cat" data-en="Dependency scanner" data-vn="Quét phụ thuộc">Dependency scanner</span></div>
+        </div>
+        <p class="tc-desc" data-en="Scans lockfiles and manifests (pip, npm, Maven, Go, Cargo) against the OSV.dev CVE database — safety score, A–F grade, offline cache, text/JSON/Markdown reports." data-vn="Quét lockfile/manifest (pip, npm, Maven, Go, Cargo) đối chiếu cơ sở dữ liệu CVE OSV.dev — điểm an toàn, xếp hạng A–F, cache offline, xuất text/JSON/Markdown.">Scans lockfiles and manifests (pip, npm, Maven, Go, Cargo) against the OSV.dev CVE database — safety score, A–F grade, offline cache, text/JSON/Markdown reports.</p>
+        <code class="tc-cmd"><span class="kw">python</span> depcheck.py --update requirements.txt</code>
+        <a href="tools/depcheck.py" download class="tc-dl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg><span data-en="Download Tool" data-vn="Tải Công cụ">Download Tool</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- legal note -->
+  <div class="callout warn">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+    <p data-en="Use these tools only against targets you own or are authorized to test. Scanning systems you do not own may violate the law and provider terms of service — make sure you have written permission before running anything." data-vn="Chỉ dùng các công cụ này cho mục tiêu bạn sở hữu hoặc được ủy quyền kiểm tra. Quét hệ thống không thuộc quyền sở hữu có thể vi phạm pháp luật và điều khoản sử dụng của nhà cung cấp — hãy đảm bảo có văn bản cho phép trước khi chạy.">Use these tools only against targets you own or are authorized to test. Scanning systems you do not own may violate the law and provider terms of service — make sure you have written permission before running anything.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-bottom">
+    <span>© 2026 DigitalCore Team. <span data-en="All rights reserved." data-vn="Bảo lưu mọi quyền.">All rights reserved.</span></span>
+    <span class="status-line"><span class="led"></span><span data-en="Toolkit: up to date" data-vn="Bộ công cụ: đã cập nhật">Toolkit: up to date</span></span>
+    <a href="index.html" data-en="Back to home" data-vn="Quay lại trang chủ">Back to home</a>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  /* particles */
+  var canvas = document.getElementById("particles");
+  var ctx = canvas.getContext("2d");
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var W, H, parts = [], links = [], raf;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  function seed() {
+    parts = [];
+    var count = Math.min(70, Math.floor(W * H / 22000));
+    for (var i = 0; i < count; i++) {
+      parts.push({ x: Math.random() * W, y: Math.random() * H, vx: (Math.random() - 0.5) * 0.3, vy: (Math.random() - 0.5) * 0.3, r: Math.random() * 1.4 + 0.5 });
+    }
+    links = [];
+    for (var j = 0; j < count; j++) links.push({ a: j, b: Math.floor(Math.random() * count) });
+  }
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.lineWidth = 0.6;
+    for (var i = 0; i < links.length; i++) {
+      var pa = parts[links[i].a], pb = parts[links[i].b];
+      var dx = pa.x - pb.x, dy = pa.y - pb.y;
+      var dist = Math.sqrt(dx * dx + dy * dy);
+      if (dist < 170) {
+        var alpha = (1 - dist / 170) * 0.3;
+        var grad = ctx.createLinearGradient(pa.x, pa.y, pb.x, pb.y);
+        grad.addColorStop(0, "rgba(0,234,255," + alpha + ")");
+        grad.addColorStop(1, "rgba(47,123,255," + alpha + ")");
+        ctx.strokeStyle = grad;
+        ctx.beginPath(); ctx.moveTo(pa.x, pa.y); ctx.lineTo(pb.x, pb.y); ctx.stroke();
+      }
+    }
+    for (var j = 0; j < parts.length; j++) {
+      var p = parts[j];
+      p.x += p.vx; p.y += p.vy;
+      if (p.x < 0 || p.x > W) p.vx *= -1;
+      if (p.y < 0 || p.y > H) p.vy *= -1;
+      ctx.fillStyle = "rgba(0,234,255,0.5)";
+      ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2); ctx.fill();
+    }
+    raf = requestAnimationFrame(draw);
+  }
+  if (reduced) { resize(); }
+  else { resize(); seed(); draw(); }
+  window.addEventListener("resize", function () { resize(); if (reduced) return; seed(); });
+
+  /* mobile menu */
+  var burger = document.getElementById("hamburger");
+  var menu = document.getElementById("mobileMenu");
+  burger.addEventListener("click", function () {
+    burger.classList.toggle("open");
+    menu.classList.toggle("open");
+  });
+  menu.querySelectorAll("a").forEach(function (a) {
+    a.addEventListener("click", function () { burger.classList.remove("open"); menu.classList.remove("open"); });
+  });
+
+  /* language toggle */
+  var langBtn = document.getElementById("langToggle");
+  var langLabel = document.getElementById("langLabel");
+  var currentLang = "en";
+  function setLang(lang) {
+    currentLang = lang;
+    var attr = "data-" + lang;
+    document.querySelectorAll("[" + attr + "]").forEach(function (el) {
+      var txt = el.getAttribute(attr);
+      if (txt !== null && txt !== "") el.innerHTML = txt;
+    });
+    langLabel.textContent = lang === "en" ? "VN" : "EN";
+    document.documentElement.lang = lang;
+    try { localStorage.setItem("dc-lang", lang); } catch (e) {}
+  }
+  langBtn.addEventListener("click", function () {
+    setLang(currentLang === "en" ? "vn" : "en");
+  });
+  var saved = null;
+  try { saved = localStorage.getItem("dc-lang"); } catch (e) {}
+  if (saved === "vn") setLang("vn");
+
+  /* tool card navigation */
+  var cards = document.querySelectorAll(".tool-card");
+  function openCard(card) {
+    var href = card.getAttribute("data-href");
+    if (href) window.location.href = href;
+  }
+  for (var i = 0; i < cards.length; i++) {
+    (function (card) {
+      var titleEl = card.querySelector(".tc-title");
+      if (!titleEl) return;
+      var page = titleEl.textContent.replace(/\.py$/i, ".html");
+      card.setAttribute("data-href", "tools/" + page);
+      card.setAttribute("tabindex", "0");
+      card.setAttribute("role", "link");
+      card.setAttribute("aria-label", "Open " + page.replace(/\.html$/i, "") + " details");
+
+      card.addEventListener("click", function (e) {
+        var target = e.target;
+        while (target && target !== card) {
+          if (target.tagName === "A" && target.className.indexOf("tc-dl") !== -1) {
+            return;
+          }
+          target = target.parentNode;
+        }
+        openCard(card);
+      });
+
+      card.addEventListener("keydown", function (e) {
+        var key = e.key || e.keyCode;
+        if (key === "Enter" || key === 13 || key === " " || key === 32) {
+          e.preventDefault();
+          openCard(card);
+        }
+      });
+    })(cards[i]);
+  }
+})();
+</script>
+</body>
+</html>
