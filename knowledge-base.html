@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<title>Knowledge Base — DigitalCore Team</title>
+<meta name="description" content="DigitalCore Knowledge Base — download reference guides and study materials for computer fundamentals, cybersecurity, programming, Linux, and AI." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="docs.css" />
+</head>
+<body>
+
+<div class="bg-glow"></div>
+<div class="bg-grid"></div>
+<canvas id="particles"></canvas>
+
+<!-- nav -->
+<nav id="navbar">
+  <a href="index.html" class="brand">
+    <span class="brand-mark">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4v10l-9 4-9-4V7z"/><path d="M3 7l9 4 9-4"/><path d="M12 11v10"/></svg>
+    </span>
+    <span>DigitalCore<span style="color:var(--cyan)">.</span></span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html#features" data-en="Platform" data-vn="Nền tảng">Platform</a>
+    <a href="index.html#roadmap" data-en="Roadmap" data-vn="Lộ trình">Roadmap</a>
+    <a href="index.html#articles" data-en="Articles" data-vn="Bài viết">Articles</a>
+    <a href="knowledge-base.html" class="active" data-en="Knowledge" data-vn="Kiến thức">Knowledge</a>
+    <a href="docs.html" data-en="Docs" data-vn="Tài liệu">Docs</a>
+    <a href="about.html" data-en="About" data-vn="Về chúng tôi">About</a>
+    <a href="index.html#stats" data-en="Stats" data-vn="Số liệu">Stats</a>
+    <button class="lang-toggle" id="langToggle"><span class="dot"></span><span id="langLabel">VN</span></button>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html#features" data-en="Platform" data-vn="Nền tảng">Platform</a>
+  <a href="index.html#roadmap" data-en="Roadmap" data-vn="Lộ trình">Roadmap</a>
+  <a href="index.html#articles" data-en="Articles" data-vn="Bài viết">Articles</a>
+  <a href="knowledge-base.html" class="active" data-en="Knowledge" data-vn="Kiến thức">Knowledge</a>
+  <a href="docs.html" data-en="Docs" data-vn="Tài liệu">Docs</a>
+  <a href="about.html" data-en="About" data-vn="Về chúng tôi">About</a>
+  <a href="index.html#stats" data-en="Stats" data-vn="Số liệu">Stats</a>
+</div>
+
+<!-- content -->
+<div class="kb-wrap">
+  <a href="docs.html" class="doc-toplink">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    <span data-en="Back to docs" data-vn="Quay lại tài liệu">Back to docs</span>
+  </a>
+
+  <div class="doc-head">
+    <span class="doc-eyebrow" data-en="Knowledge Base" data-vn="Kho Kiến thức">Knowledge Base</span>
+    <h1 data-en="DigitalCore Knowledge Base" data-vn="Kho Kiến thức DigitalCore">DigitalCore Knowledge Base</h1>
+    <p data-en="Computer science, hardware, operating systems, networking, and technology fundamentals — the bedrock of every other module. Download ready-to-use reference guides and study materials here." data-vn="Khoa học máy tính, phần cứng, hệ điều hành, mạng máy tính và nền tảng công nghệ — nền móng của mọi mô-đun khác. Tải xuống sách hướng dẫn tham khảo và tài liệu học tập sẵn sàng dùng tại đây.">Computer science, hardware, operating systems, networking, and technology fundamentals — the bedrock of every other module. Download ready-to-use reference guides and study materials here.</p>
+  </div>
+
+  <div class="kb-grid">
+    <div class="doc-item">
+      <div class="di-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+      </div>
+      <div class="di-info">
+        <h4 data-en="Computer Fundamentals" data-vn="Nền tảng máy tính">Computer Fundamentals</h4>
+        <p data-en="Foundational knowledge of computers — hardware, operating systems, and how the machine works under the hood." data-vn="Kiến thức nền tảng về máy tính — phần cứng, hệ điều hành và cách máy hoạt động bên trong.">Foundational knowledge of computers — hardware, operating systems, and how the machine works under the hood.</p>
+        <div class="di-meta"><span class="badge">PDF</span><span data-en="80 KB" data-vn="80 KB">80 KB</span><span data-en="Vietnamese" data-vn="Tiếng Việt">Vietnamese</span><span data-en="Updated 2026" data-vn="Cập nhật 2026">Updated 2026</span></div>
+      </div>
+      <a href="viewer.html?doc=nen-tang" class="di-dl">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        <span data-en="View Online" data-vn="Xem trực tuyến">View Online</span>
+      </a>
+    </div>
+    <div class="doc-item">
+      <div class="di-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+      </div>
+      <div class="di-info">
+        <h4 data-en="Core Programming" data-vn="Lập trình cốt lõi">Core Programming</h4>
+        <p data-en="Core programming concepts — variables, data types, control flow, functions, and the mental models every developer needs before touching a real project." data-vn="Các khái niệm lập trình cốt lõi — biến, kiểu dữ liệu, luồng điều khiển, hàm và mô hình tư duy mà mọi lập trình viên cần trước khi bước vào dự án thực tế.">Core programming concepts — variables, data types, control flow, functions, and the mental models every developer needs before touching a real project.</p>
+        <div class="di-meta"><span class="badge">PDF</span><span data-en="92 KB" data-vn="92 KB">92 KB</span><span data-en="Vietnamese" data-vn="Tiếng Việt">Vietnamese</span><span data-en="Updated 2026" data-vn="Cập nhật 2026">Updated 2026</span></div>
+      </div>
+      <a href="viewer.html?doc=lap-trinh" class="di-dl">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        <span data-en="View Online" data-vn="Xem trực tuyến">View Online</span>
+      </a>
+    </div>
+    <div class="doc-item">
+      <div class="di-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M4 9h16"/><path d="M6 13h.01M9 13h.01M12 13h.01"/><path d="M7 21l5-4 5 4"/></svg>
+      </div>
+      <div class="di-info">
+        <h4 data-en="Linux System" data-vn="Hệ thống Linux">Linux System</h4>
+        <p data-en="Linux system administration essentials — filesystem, users and permissions, processes, shell, and package management." data-vn="Kiến thức quản trị hệ thống Linux — hệ thống tập tin, người dùng và quyền, tiến trình, shell và quản lý gói.">Linux system administration essentials — filesystem, users and permissions, processes, shell, and package management.</p>
+        <div class="di-meta"><span class="badge">PDF</span><span data-en="76 KB" data-vn="76 KB">76 KB</span><span data-en="Vietnamese" data-vn="Tiếng Việt">Vietnamese</span><span data-en="Updated 2026" data-vn="Cập nhật 2026">Updated 2026</span></div>
+      </div>
+      <a href="viewer.html?doc=linux" class="di-dl">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        <span data-en="View Online" data-vn="Xem trực tuyến">View Online</span>
+      </a>
+    </div>
+    <div class="doc-item">
+      <div class="di-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/><circle cx="12" cy="16" r="1.5"/></svg>
+      </div>
+      <div class="di-info">
+        <h4 data-en="Security, Crypto &amp; AI" data-vn="Bảo mật, Mật mã &amp; AI">Security, Crypto &amp; AI</h4>
+        <p data-en="Security, cryptography, and artificial intelligence — core concepts, real-world threats, and the modern tools shaping the field." data-vn="Bảo mật, mật mã và trí tuệ nhân tạo — khái niệm cốt lõi, mối đe dọa thực tế và công cụ hiện đại định hình lĩnh vực này.">Security, cryptography, and artificial intelligence — core concepts, real-world threats, and the modern tools shaping the field.</p>
+        <div class="di-meta"><span class="badge">PDF</span><span data-en="80 KB" data-vn="80 KB">80 KB</span><span data-en="Vietnamese" data-vn="Tiếng Việt">Vietnamese</span><span data-en="Updated 2026" data-vn="Cập nhật 2026">Updated 2026</span></div>
+      </div>
+      <a href="viewer.html?doc=security" class="di-dl">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        <span data-en="View Online" data-vn="Xem trực tuyến">View Online</span>
+      </a>
+    </div>
+    <div class="doc-item">
+      <div class="di-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-3 8-10V5l-8-3-8 3v7c0 7 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+      </div>
+      <div class="di-info">
+        <h4 data-en="Apply with Proficiency" data-vn="Vận dụng thành thạo">Apply with Proficiency</h4>
+        <p data-en="A comprehensive guide to Capture The Flag — challenge types, hands-on lab platforms, final projects, and how to build a strong portfolio." data-vn="Hướng dẫn toàn diện về Capture The Flag — các loại thử thách, nền tảng lab thực tế, dự án cuối khóa và cách xây dựng hồ sơ năng lực.">A comprehensive guide to Capture The Flag — challenge types, hands-on lab platforms, final projects, and how to build a strong portfolio.</p>
+        <div class="di-meta"><span class="badge">PDF</span><span data-en="91 KB" data-vn="91 KB">91 KB</span><span data-en="Vietnamese" data-vn="Tiếng Việt">Vietnamese</span><span data-en="Updated 2026" data-vn="Cập nhật 2026">Updated 2026</span></div>
+      </div>
+      <a href="viewer.html?doc=bao-cao-ctf" class="di-dl">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        <span data-en="View Online" data-vn="Xem trực tuyến">View Online</span>
+      </a>
+    </div>
+  </div>
+
+  <section class="qrh">
+    <span class="doc-eyebrow" data-en="Quick Reference Handbook" data-vn="Sổ tay Tra cứu Nhanh">Quick Reference Handbook</span>
+    <h3 data-en="Essential commands at a glance" data-vn="Các lệnh thiết yếu trong nháy mắt">Essential commands at a glance</h3>
+    <p data-en="Hand-picked commands and shortcuts for Linux, networking, security, and Git — copy them straight into your terminal." data-vn="Các lệnh và phím tắt chọn lọc cho Linux, mạng, bảo mật và Git — sao chép trực tiếp vào terminal của bạn.">Hand-picked commands and shortcuts for Linux, networking, security, and Git — copy them straight into your terminal.</p>
+    <div class="doc-table-wrap">
+      <table class="doc-table">
+        <thead>
+          <tr>
+            <th data-en="Command" data-vn="Lệnh">Command</th>
+            <th data-en="Purpose" data-vn="Mục đích">Purpose</th>
+            <th data-en="Category" data-vn="Nhóm">Category</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>ls -la</td><td data-en="List all files, including hidden entries, with details." data-vn="Liệt kê tất cả file, kể cả file ẩn, kèm chi tiết.">List all files, including hidden entries, with details.</td><td><span class="qrh-tag">Linux</span></td></tr>
+          <tr><td>cd &lt;dir&gt;</td><td data-en="Change the current working directory." data-vn="Đổi thư mục làm việc hiện tại.">Change the current working directory.</td><td><span class="qrh-tag">Linux</span></td></tr>
+          <tr><td>chmod 755 &lt;file&gt;</td><td data-en="Set file or directory permissions." data-vn="Đặt quyền truy cập cho file hoặc thư mục.">Set file or directory permissions.</td><td><span class="qrh-tag">Linux</span></td></tr>
+          <tr><td>chown u:g &lt;file&gt;</td><td data-en="Change the file owner and group." data-vn="Đổi chủ sở hữu và nhóm của file.">Change the file owner and group.</td><td><span class="qrh-tag">Linux</span></td></tr>
+          <tr><td>grep -r &lt;pattern&gt; &lt;dir&gt;</td><td data-en="Search recursively for a text pattern." data-vn="Tìm kiếm đệ quy theo mẫu văn bản.">Search recursively for a text pattern.</td><td><span class="qrh-tag">Linux</span></td></tr>
+          <tr><td>find &lt;dir&gt; -name "*.log"</td><td data-en="Find files by name pattern." data-vn="Tìm file theo tên.">Find files by name pattern.</td><td><span class="qrh-tag">Linux</span></td></tr>
+          <tr><td>ps aux</td><td data-en="List all running processes." data-vn="Liệt kê mọi tiến trình đang chạy.">List all running processes.</td><td><span class="qrh-tag">Linux</span></td></tr>
+          <tr><td>kill -9 &lt;pid&gt;</td><td data-en="Force-stop a process by its PID." data-vn="Buộc dừng một tiến trình theo PID.">Force-stop a process by its PID.</td><td><span class="qrh-tag">Linux</span></td></tr>
+          <tr><td>systemctl restart &lt;svc&gt;</td><td data-en="Restart a system service." data-vn="Khởi động lại một dịch vụ hệ thống.">Restart a system service.</td><td><span class="qrh-tag">Linux</span></td></tr>
+          <tr><td>tar -czvf a.tar.gz &lt;dir&gt;</td><td data-en="Create a compressed archive of a directory." data-vn="Nén một thư mục thành archive.">Create a compressed archive of a directory.</td><td><span class="qrh-tag">Linux</span></td></tr>
+          <tr><td>tar -xzvf a.tar.gz</td><td data-en="Extract a compressed archive." data-vn="Giải nén archive đã nén.">Extract a compressed archive.</td><td><span class="qrh-tag">Linux</span></td></tr>
+          <tr><td>ping &lt;host&gt;</td><td data-en="Test whether a host is reachable." data-vn="Kiểm tra kết nối đến một host.">Test whether a host is reachable.</td><td><span class="qrh-tag">Networking</span></td></tr>
+          <tr><td>curl -I &lt;url&gt;</td><td data-en="Fetch the HTTP response headers of a URL." data-vn="Lấy các header phản hồi HTTP của một URL.">Fetch the HTTP response headers of a URL.</td><td><span class="qrh-tag">Networking</span></td></tr>
+          <tr><td>ss -tulpn</td><td data-en="List open ports and listening sockets." data-vn="Liệt kê các cổng đang mở và socket đang lắng nghe.">List open ports and listening sockets.</td><td><span class="qrh-tag">Networking</span></td></tr>
+          <tr><td>nc -lvnp &lt;port&gt;</td><td data-en="Listen for connections on a TCP/UDP port." data-vn="Lắng nghe kết nối trên một cổng TCP/UDP.">Listen for connections on a TCP/UDP port.</td><td><span class="qrh-tag">Networking</span></td></tr>
+          <tr><td>tcpdump -i eth0</td><td data-en="Capture network packets on an interface." data-vn="Bắt các gói tin mạng trên một interface.">Capture network packets on an interface.</td><td><span class="qrh-tag">Networking</span></td></tr>
+          <tr><td>nmap -sV -p- &lt;host&gt;</td><td data-en="Run a full service and version scan." data-vn="Quét toàn bộ cổng kèm dịch vụ và phiên bản.">Run a full service and version scan.</td><td><span class="qrh-tag">Security</span></td></tr>
+          <tr><td>gobuster dir -u &lt;url&gt; -w &lt;wl&gt;</td><td data-en="Enumerate directories on a web server." data-vn="Liệt kê các thư mục trên một web server.">Enumerate directories on a web server.</td><td><span class="qrh-tag">Security</span></td></tr>
+          <tr><td>hydra -l user -P pass.txt ssh://&lt;host&gt;</td><td data-en="Brute-force an SSH login with a wordlist." data-vn="Thử đăng nhập SSH với từ điển mật khẩu.">Brute-force an SSH login with a wordlist.</td><td><span class="qrh-tag">Security</span></td></tr>
+          <tr><td>john --wordlist=&lt;wl&gt; hash.txt</td><td data-en="Crack password hashes from a file." data-vn="Bẻ khóa các hash mật khẩu từ một file.">Crack password hashes from a file.</td><td><span class="qrh-tag">Security</span></td></tr>
+          <tr><td>sqlmap -u &lt;url&gt; --dbs</td><td data-en="Automatically enumerate databases via SQL injection." data-vn="Tự động liệt kê cơ sở dữ liệu qua SQL injection.">Automatically enumerate databases via SQL injection.</td><td><span class="qrh-tag">Security</span></td></tr>
+          <tr><td>python3 -m http.server 8000</td><td data-en="Serve the current folder on port 8000." data-vn="Phục vụ thư mục hiện tại trên cổng 8000.">Serve the current folder on port 8000.</td><td><span class="qrh-tag">Security</span></td></tr>
+          <tr><td>git init</td><td data-en="Initialize a Git repository in the current folder." data-vn="Khởi tạo kho Git trong thư mục hiện tại.">Initialize a Git repository in the current folder.</td><td><span class="qrh-tag">Git</span></td></tr>
+          <tr><td>git add .</td><td data-en="Stage all changed files." data-vn="Đưa mọi file đã thay đổi vào vùng stage.">Stage all changed files.</td><td><span class="qrh-tag">Git</span></td></tr>
+          <tr><td>git commit -m "&lt;msg&gt;"</td><td data-en="Commit the staged changes with a message." data-vn="Ghi lại các thay đổi đã stage kèm thông điệp.">Commit the staged changes with a message.</td><td><span class="qrh-tag">Git</span></td></tr>
+          <tr><td>git push</td><td data-en="Upload local commits to the remote repository." data-vn="Đẩy các commit cục bộ lên kho remote.">Upload local commits to the remote repository.</td><td><span class="qrh-tag">Git</span></td></tr>
+          <tr><td>git log --oneline</td><td data-en="Show the commit history in compact form." data-vn="Xem lịch sử commit dạng rút gọn.">Show the commit history in compact form.</td><td><span class="qrh-tag">Git</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="footer-bottom">
+    <span>© 2026 DigitalCore Team. <span data-en="All rights reserved." data-vn="Bảo lưu mọi quyền.">All rights reserved.</span></span>
+    <span class="status-line"><span class="led"></span><span data-en="Docs: up to date" data-vn="Tài liệu: đã cập nhật">Docs: up to date</span></span>
+    <a href="index.html" data-en="Back to home" data-vn="Quay lại trang chủ">Back to home</a>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  /* particles */
+  var canvas = document.getElementById("particles");
+  var ctx = canvas.getContext("2d");
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var W, H, parts = [], links = [], raf;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  function seed() {
+    parts = [];
+    var count = Math.min(70, Math.floor(W * H / 22000));
+    for (var i = 0; i < count; i++) {
+      parts.push({ x: Math.random() * W, y: Math.random() * H, vx: (Math.random() - 0.5) * 0.3, vy: (Math.random() - 0.5) * 0.3, r: Math.random() * 1.4 + 0.5 });
+    }
+    links = [];
+    for (var j = 0; j < count; j++) links.push({ a: j, b: Math.floor(Math.random() * count) });
+  }
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.lineWidth = 0.6;
+    for (var i = 0; i < links.length; i++) {
+      var pa = parts[links[i].a], pb = parts[links[i].b];
+      var dx = pa.x - pb.x, dy = pa.y - pb.y;
+      var dist = Math.sqrt(dx * dx + dy * dy);
+      if (dist < 170) {
+        var alpha = (1 - dist / 170) * 0.3;
+        var grad = ctx.createLinearGradient(pa.x, pa.y, pb.x, pb.y);
+        grad.addColorStop(0, "rgba(0,234,255," + alpha + ")");
+        grad.addColorStop(1, "rgba(47,123,255," + alpha + ")");
+        ctx.strokeStyle = grad;
+        ctx.beginPath(); ctx.moveTo(pa.x, pa.y); ctx.lineTo(pb.x, pb.y); ctx.stroke();
+      }
+    }
+    for (var j = 0; j < parts.length; j++) {
+      var p = parts[j];
+      p.x += p.vx; p.y += p.vy;
+      if (p.x < 0 || p.x > W) p.vx *= -1;
+      if (p.y < 0 || p.y > H) p.vy *= -1;
+      ctx.fillStyle = "rgba(0,234,255,0.5)";
+      ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2); ctx.fill();
+    }
+    raf = requestAnimationFrame(draw);
+  }
+  if (reduced) { resize(); }
+  else { resize(); seed(); draw(); }
+  window.addEventListener("resize", function () { resize(); if (reduced) return; seed(); });
+
+  /* mobile menu */
+  var burger = document.getElementById("hamburger");
+  var menu = document.getElementById("mobileMenu");
+  burger.addEventListener("click", function () {
+    burger.classList.toggle("open");
+    menu.classList.toggle("open");
+  });
+  menu.querySelectorAll("a").forEach(function (a) {
+    a.addEventListener("click", function () { burger.classList.remove("open"); menu.classList.remove("open"); });
+  });
+
+  /* language toggle */
+  var langBtn = document.getElementById("langToggle");
+  var langLabel = document.getElementById("langLabel");
+  var currentLang = "en";
+  function setLang(lang) {
+    currentLang = lang;
+    var attr = "data-" + lang;
+    document.querySelectorAll("[" + attr + "]").forEach(function (el) {
+      var txt = el.getAttribute(attr);
+      if (txt !== null && txt !== "") el.innerHTML = txt;
+    });
+    langLabel.textContent = lang === "en" ? "VN" : "EN";
+    document.documentElement.lang = lang;
+    try { localStorage.setItem("dc-lang", lang); } catch (e) {}
+  }
+  langBtn.addEventListener("click", function () {
+    setLang(currentLang === "en" ? "vn" : "en");
+  });
+  var saved = null;
+  try { saved = localStorage.getItem("dc-lang"); } catch (e) {}
+  if (saved === "vn") setLang("vn");
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<title>About — DigitalCore Team</title>
+<meta name="description" content="Learn about DigitalCore Team — a cybersecurity research division and digital knowledge hub focused on computer fundamentals, programming, Linux, security, and AI." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="docs.css" />
+<link rel="stylesheet" href="about.css" />
+</head>
+<body>
+
+<div class="bg-glow"></div>
+<div class="bg-grid"></div>
+<canvas id="particles"></canvas>
+
+<!-- nav -->
+<nav id="navbar">
+  <a href="index.html" class="brand">
+    <span class="brand-mark">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4v10l-9 4-9-4V7z"/><path d="M3 7l9 4 9-4"/><path d="M12 11v10"/></svg>
+    </span>
+    <span>DigitalCore<span style="color:var(--cyan)">.</span></span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html#features" data-en="Platform" data-vn="Nền tảng">Platform</a>
+    <a href="index.html#roadmap" data-en="Roadmap" data-vn="Lộ trình">Roadmap</a>
+    <a href="index.html#articles" data-en="Articles" data-vn="Bài viết">Articles</a>
+    <a href="knowledge-base.html" data-en="Knowledge" data-vn="Kiến thức">Knowledge</a>
+    <a href="docs.html" data-en="Docs" data-vn="Tài liệu">Docs</a>
+    <a href="about.html" class="active" data-en="About" data-vn="Về chúng tôi">About</a>
+    <button class="lang-toggle" id="langToggle"><span class="dot"></span><span id="langLabel">VN</span></button>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html#features" data-en="Platform" data-vn="Nền tảng">Platform</a>
+  <a href="index.html#roadmap" data-en="Roadmap" data-vn="Lộ trình">Roadmap</a>
+  <a href="index.html#articles" data-en="Articles" data-vn="Bài viết">Articles</a>
+  <a href="knowledge-base.html" data-en="Knowledge" data-vn="Kiến thức">Knowledge</a>
+  <a href="docs.html" data-en="Docs" data-vn="Tài liệu">Docs</a>
+  <a href="about.html" class="active" data-en="About" data-vn="Về chúng tôi">About</a>
+</div>
+
+<!-- content -->
+<div class="about-wrap">
+  <a href="index.html" class="doc-toplink">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    <span data-en="Back to home" data-vn="Quay lại trang chủ">Back to home</span>
+  </a>
+
+  <div class="doc-head center">
+    <span class="doc-eyebrow" data-en="About Us" data-vn="Về chúng tôi">About Us</span>
+    <h1 data-en="DigitalCore Team" data-vn="DigitalCore Team">DigitalCore Team</h1>
+    <p data-en="A technology research group and digital knowledge hub focused on understanding how modern systems are built, from hardware and operating systems to software, networks, and security." data-vn="Một nhóm nghiên cứu công nghệ và trung tâm tri thức số, tập trung vào việc hiểu cách các hệ thống hiện đại được xây dựng — từ phần cứng và hệ điều hành đến phần mềm, mạng và bảo mật.">A technology research group and digital knowledge hub focused on understanding how modern systems are built, from hardware and operating systems to software, networks, and security.</p>
+  </div>
+
+  <!-- who we are -->
+  <section class="about-section center reveal">
+    <h2><span class="idx" data-en="01" data-vn="01">01</span><span data-en="Who we are" data-vn="Chúng tôi là ai">Who we are</span></h2>
+    <p data-en="DigitalCore Team is a group of learners, builders, and researchers driven by one goal: understanding technology from the ground up." data-vn="DigitalCore Team là một nhóm người học, người xây dựng và nhà nghiên cứu với cùng một mục tiêu: hiểu công nghệ từ gốc rễ.">DigitalCore Team is a group of learners, builders, and researchers driven by one goal: understanding technology from the ground up.</p>
+    <p data-en="We believe real mastery comes from strong fundamentals — understanding how computers work internally, how software is created, how systems communicate, and how technology can be built, analyzed, and improved." data-vn="Chúng tôi tin sự thành thạo thực sự đến từ nền tảng vững chắc — hiểu cách máy tính hoạt động bên trong, cách phần mềm được tạo ra, cách hệ thống giao tiếp và cách công nghệ có thể được xây dựng, phân tích và cải tiến.">We believe real mastery comes from strong fundamentals — understanding how computers work internally, how software is created, how systems communicate, and how technology can be built, analyzed, and improved.</p>
+    <p data-en="Our resources combine theory with practical learning. Concepts are connected with experiments, projects, simulations, and real-world tools so knowledge becomes something that can be applied, not just memorized." data-vn="Tài nguyên của chúng tôi kết hợp lý thuyết với thực hành. Các khái niệm được gắn với thí nghiệm, dự án, mô phỏng và công cụ thực tế, để kiến thức trở thành thứ có thể áp dụng, không chỉ ghi nhớ.">Our resources combine theory with practical learning. Concepts are connected with experiments, projects, simulations, and real-world tools so knowledge becomes something that can be applied, not just memorized.</p>
+  </section>
+
+  <!-- core principles -->
+  <section class="about-section reveal">
+    <h2><span class="idx" data-en="02" data-vn="02">02</span><span data-en="Core principles" data-vn="Nguyên tắc cốt lõi">Core principles</span></h2>
+    <div class="principles-grid">
+      <div class="principle reveal d1">
+        <div class="p-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 3v6c0 5.25-3.4 9.74-8 11-4.6-1.26-8-5.75-8-11V5l8-3z"/><path d="M9 12l2 2 4-4"/></svg>
+        </div>
+        <h3 data-en="Deep fundamentals first" data-vn="Nền tảng sâu trước">Deep fundamentals first</h3>
+        <p data-en="Understand how systems really work before building on top of them." data-vn="Hiểu cách hệ thống thực sự hoạt động trước khi xây dựng phía trên.">Understand how systems really work before building on top of them.</p>
+      </div>
+      <div class="principle reveal d2">
+        <div class="p-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><path d="M9 7h6M9 11h6"/></svg>
+        </div>
+        <h3 data-en="Hands-on practice" data-vn="Thực hành tay">Hands-on practice</h3>
+        <p data-en="Every concept is paired with labs, challenges, and real tooling." data-vn="Mọi khái niệm đi kèm phòng lab, thử thách và công cụ thực tế.">Every concept is paired with labs, challenges, and real tooling.</p>
+      </div>
+      <div class="principle reveal d3">
+        <div class="p-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><line x1="14" y1="4" x2="10" y2="20"/></svg>
+        </div>
+        <h3 data-en="Security-minded by default" data-vn="Tư duy bảo mật mặc định">Security-minded by default</h3>
+        <p data-en="Defensive thinking is applied to every layer of the stack." data-vn="Tư duy phòng thủ được áp dụng ở mọi lớp của hệ thống.">Defensive thinking is applied to every layer of the stack.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- what we build -->
+  <section class="about-section reveal">
+    <h2><span class="idx" data-en="03" data-vn="03">03</span><span data-en="What we build" data-vn="Chúng tôi xây dựng gì">What we build</span></h2>
+    <p data-en="A single hub for the entire digital world — four pillars built for serious learners." data-vn="Một trung tâm duy nhất cho toàn bộ thế giới số — bốn trụ cột dành cho người học nghiêm túc.">A single hub for the entire digital world — four pillars built for serious learners.</p>
+    <div class="pillars-grid">
+      <div class="pillar reveal d1">
+        <div class="pl-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><path d="M9 7h6M9 11h6"/><circle cx="17.5" cy="8" r="0.5"/><circle cx="17.5" cy="12" r="0.5"/></svg>
+        </div>
+        <h3 data-en="Knowledge Base" data-vn="Kho Kiến thức">Knowledge Base</h3>
+        <p data-en="Reference guides and study materials for computer science, hardware, networking, and technology fundamentals." data-vn="Sách hướng dẫn và tài liệu học tập về khoa học máy tính, phần cứng, mạng và nền tảng công nghệ.">Reference guides and study materials for computer science, hardware, networking, and technology fundamentals.</p>
+        <span class="pl-tag" data-en="Foundations" data-vn="Nền tảng">Foundations</span>
+      </div>
+      <div class="pillar reveal d2">
+        <div class="pl-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 3v6c0 5.25-3.4 9.74-8 11-4.6-1.26-8-5.75-8-11V5l8-3z"/><path d="M9 12l2 2 4-4"/><circle cx="18" cy="6" r="1.2"/></svg>
+        </div>
+        <h3 data-en="Security Lab" data-vn="Phòng lab Bảo mật">Security Lab</h3>
+        <p data-en="Cybersecurity concepts, defensive security, Linux tools, and ethical hacking education." data-vn="Khái niệm an ninh mạng, bảo mật phòng thủ, công cụ Linux và đào tạo hack có đạo đức.">Cybersecurity concepts, defensive security, Linux tools, and ethical hacking education.</p>
+        <span class="pl-tag" data-en="Cybersec" data-vn="An ninh mạng">Cybersec</span>
+      </div>
+      <div class="pillar reveal d3">
+        <div class="pl-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><line x1="14" y1="4" x2="10" y2="20"/></svg>
+        </div>
+        <h3 data-en="Developer Hub" data-vn="Trung tâm Lập trình">Developer Hub</h3>
+        <p data-en="Programming, web development, AI projects, and software engineering resources." data-vn="Lập trình, phát triển web, dự án AI và tài nguyên kỹ thuật phần mềm.">Programming, web development, AI projects, and software engineering resources.</p>
+        <span class="pl-tag" data-en="Dev & AI" data-vn="Dev & AI">Dev & AI</span>
+      </div>
+      <div class="pillar reveal d4">
+        <div class="pl-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 15l4-3-4-3M13 15h4"/></svg>
+        </div>
+        <h3 data-en="Tool Database" data-vn="Cơ sở dữ liệu Công cụ">Tool Database</h3>
+        <p data-en="A searchable collection of technology tools and practical references." data-vn="Bộ sưu tập công cụ công nghệ và tài liệu tham khảo thực tiễn có thể tìm kiếm.">A searchable collection of technology tools and practical references.</p>
+        <span class="pl-tag" data-en="Reference" data-vn="Tham khảo">Reference</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- by the numbers -->
+  <section class="about-section reveal">
+    <h2><span class="idx" data-en="04" data-vn="04">04</span><span data-en="By the numbers" data-vn="Nhìn bằng con số">By the numbers</span></h2>
+    <div class="stats-grid">
+      <div class="stat-card reveal d1">
+        <div class="num">5</div>
+        <div class="lbl" data-en="Deep-dive articles" data-vn="Bài viết chuyên sâu">Deep-dive articles</div>
+      </div>
+      <div class="stat-card reveal d2">
+        <div class="num">5</div>
+        <div class="lbl" data-en="Lab challenges" data-vn="Thử thách phòng lab">Lab challenges</div>
+      </div>
+      <div class="stat-card reveal d3">
+        <div class="num">3</div>
+        <div class="lbl" data-en="Learning phases" data-vn="Giai đoạn học tập">Learning phases</div>
+      </div>
+      <div class="stat-card reveal d4">
+        <div class="num">4</div>
+        <div class="lbl" data-en="Platform pillars" data-vn="Trụ cột nền tảng">Platform pillars</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- cta -->
+  <div class="callout reveal">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+    <p data-en="Explore the platform — browse the Knowledge Base, follow the learning roadmap, or read the field notes from the lab." data-vn="Khám phá nền tảng — duyệt Kho Kiến thức, theo lộ trình học tập, hoặc đọc các bài viết thực chiến từ phòng lab.">Explore the platform — browse the Knowledge Base, follow the learning roadmap, or read the field notes from the lab.</p>
+  </div>
+  <a href="knowledge-base.html" class="kb-btn reveal d1">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    <span data-en="Open Knowledge Base" data-vn="Mở Kho Kiến thức">Open Knowledge Base</span>
+  </a>
+</div>
+
+<footer>
+  <div class="footer-bottom">
+    <span>© 2026 DigitalCore Team. <span data-en="All rights reserved." data-vn="Bảo lưu mọi quyền.">All rights reserved.</span></span>
+    <span class="status-line"><span class="led"></span><span data-en="All systems operational" data-vn="Tất cả hệ thống hoạt động">All systems operational</span></span>
+    <a href="index.html" data-en="Back to home" data-vn="Quay lại trang chủ">Back to home</a>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  /* particles */
+  var canvas = document.getElementById("particles");
+  var ctx = canvas.getContext("2d");
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var W, H, parts = [], links = [], raf;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  function seed() {
+    parts = [];
+    var count = Math.min(70, Math.floor(W * H / 22000));
+    for (var i = 0; i < count; i++) {
+      parts.push({ x: Math.random() * W, y: Math.random() * H, vx: (Math.random() - 0.5) * 0.3, vy: (Math.random() - 0.5) * 0.3, r: Math.random() * 1.4 + 0.5 });
+    }
+    links = [];
+    for (var j = 0; j < count; j++) links.push({ a: j, b: Math.floor(Math.random() * count) });
+  }
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.lineWidth = 0.6;
+    for (var i = 0; i < links.length; i++) {
+      var pa = parts[links[i].a], pb = parts[links[i].b];
+      var dx = pa.x - pb.x, dy = pa.y - pb.y;
+      var dist = Math.sqrt(dx * dx + dy * dy);
+      if (dist < 170) {
+        var alpha = (1 - dist / 170) * 0.3;
+        var grad = ctx.createLinearGradient(pa.x, pa.y, pb.x, pb.y);
+        grad.addColorStop(0, "rgba(0,234,255," + alpha + ")");
+        grad.addColorStop(1, "rgba(47,123,255," + alpha + ")");
+        ctx.strokeStyle = grad;
+        ctx.beginPath(); ctx.moveTo(pa.x, pa.y); ctx.lineTo(pb.x, pb.y); ctx.stroke();
+      }
+    }
+    for (var j = 0; j < parts.length; j++) {
+      var p = parts[j];
+      p.x += p.vx; p.y += p.vy;
+      if (p.x < 0 || p.x > W) p.vx *= -1;
+      if (p.y < 0 || p.y > H) p.vy *= -1;
+      ctx.fillStyle = "rgba(0,234,255,0.5)";
+      ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2); ctx.fill();
+    }
+    raf = requestAnimationFrame(draw);
+  }
+  if (reduced) { resize(); }
+  else { resize(); seed(); draw(); }
+  window.addEventListener("resize", function () { resize(); if (reduced) return; seed(); });
+
+  /* mobile menu */
+  var burger = document.getElementById("hamburger");
+  var menu = document.getElementById("mobileMenu");
+  burger.addEventListener("click", function () {
+    burger.classList.toggle("open");
+    menu.classList.toggle("open");
+  });
+  menu.querySelectorAll("a").forEach(function (a) {
+    a.addEventListener("click", function () { burger.classList.remove("open"); menu.classList.remove("open"); });
+  });
+
+  /* reveal on scroll */
+  var reveals = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add("visible"); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(function (el) { io.observe(el); });
+  } else {
+    reveals.forEach(function (el) { el.classList.add("visible"); });
+  }
+
+  /* language toggle */
+  var langBtn = document.getElementById("langToggle");
+  var langLabel = document.getElementById("langLabel");
+  var currentLang = "en";
+  function setLang(lang) {
+    currentLang = lang;
+    var attr = "data-" + lang;
+    document.querySelectorAll("[" + attr + "]").forEach(function (el) {
+      var txt = el.getAttribute(attr);
+      if (txt !== null && txt !== "") el.innerHTML = txt;
+    });
+    langLabel.textContent = lang === "en" ? "VN" : "EN";
+    document.documentElement.lang = lang;
+    try { localStorage.setItem("dc-lang", lang); } catch (e) {}
+  }
+  langBtn.addEventListener("click", function () {
+    setLang(currentLang === "en" ? "vn" : "en");
+  });
+  var saved = null;
+  try { saved = localStorage.getItem("dc-lang"); } catch (e) {}
+  if (saved === "vn") setLang("vn");
+})();
+</script>
+</body>
+</html>

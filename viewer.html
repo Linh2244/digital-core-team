@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<title>DigitalCore Knowledge Base — DigitalCore Team</title>
+<meta name="description" content="View documents from the DigitalCore Knowledge Base online." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="viewer.css" />
+</head>
+<body>
+
+<div class="bg-glow"></div>
+<div class="bg-grid"></div>
+
+<nav>
+  <a href="index.html" class="brand">
+    <span class="brand-mark">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4v10l-9 4-9-4V7z"/><path d="M3 7l9 4 9-4"/><path d="M12 11v10"/></svg>
+    </span>
+    <span>DigitalCore<span style="color:var(--cyan)">.</span></span>
+  </a>
+  <div class="nav-actions">
+    <a href="docs.html" class="nav-btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      <span data-en="Back to Docs" data-vn="Quay lại Tài liệu">Back to Docs</span>
+    </a>
+    <a href="#" id="pdfDownload" download class="nav-btn primary">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      <span data-en="Download PDF" data-vn="Tải PDF">Download PDF</span>
+    </a>
+  </div>
+</nav>
+
+<div class="viewer-head">
+  <div>
+    <span class="vh-eyebrow" data-en="Knowledge Base" data-vn="Kho Kiến thức">Knowledge Base</span>
+    <h1 id="docTitle" data-en="Computer Fundamentals" data-vn="Nền tảng máy tính">Computer Fundamentals</h1>
+    <p data-en="Reading online — scroll through the document below, or download the PDF for offline use." data-vn="Đang đọc trực tuyến — cuộn qua tài liệu bên dưới, hoặc tải PDF để dùng khi ngoại tuyến.">Reading online — scroll through the document below, or download the PDF for offline use.</p>
+  </div>
+</div>
+
+<div class="pdf-wrap">
+  <div class="pdf-frame">
+    <embed id="pdfEmbed" src="pdfs/Nen_Tang_May_Tinh_Clean.pdf" type="application/pdf" />
+  </div>
+  <div class="pdf-status">
+    <span class="status-line"><span class="led"></span><span data-en="Document loaded from DigitalCore Knowledge Base" data-vn="Tài liệu được tải từ Kho Kiến thức DigitalCore">Document loaded from DigitalCore Knowledge Base</span></span>
+    <span id="docSize" data-en="3.5 MB · PDF · Updated 2026" data-vn="3,5 MB · PDF · Cập nhật 2026">3.5 MB · PDF · Updated 2026</span>
+  </div>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  var DOCS = {
+    "nen-tang": {
+      file: "pdfs/Nen_Tang_May_Tinh_Clean.pdf",
+      titleEn: "Computer Fundamentals",
+      titleVn: "Nền tảng máy tính",
+      sizeEn: "80 KB · PDF · Updated 2026",
+      sizeVn: "80 KB · PDF · Cập nhật 2026"
+    },
+    "lap-trinh": {
+      file: "pdfs/Lap_Trinh_Cot_Loi_Clean.pdf",
+      titleEn: "Core Programming",
+      titleVn: "Lập trình cốt lõi",
+      sizeEn: "92 KB · PDF · Updated 2026",
+      sizeVn: "92 KB · PDF · Cập nhật 2026"
+    },
+    "linux": {
+      file: "pdfs/Linux_He_Thong_Clean.pdf",
+      titleEn: "Linux System",
+      titleVn: "Hệ thống Linux",
+      sizeEn: "76 KB · PDF · Updated 2026",
+      sizeVn: "76 KB · PDF · Cập nhật 2026"
+    },
+    "security": {
+      file: "pdfs/SECURITYCRYPTOAI_Clean.pdf",
+      titleEn: "Security, Crypto & AI",
+      titleVn: "Bảo mật, Mật mã & AI",
+      sizeEn: "80 KB · PDF · Updated 2026",
+      sizeVn: "80 KB · PDF · Cập nhật 2026"
+    },
+    "bao-cao-ctf": {
+      file: "pdfs/Vận dụng thành thạo.pdf",
+      titleEn: "Apply with Proficiency",
+      titleVn: "Vận dụng thành thạo",
+      sizeEn: "91 KB · PDF · Updated 2026",
+      sizeVn: "91 KB · PDF · Cập nhật 2026"
+    }
+  };
+
+  var params = new URLSearchParams(window.location.search);
+  var doc = DOCS[params.get("doc")] || DOCS["nen-tang"];
+
+  var titleEl = document.getElementById("docTitle");
+  titleEl.setAttribute("data-en", doc.titleEn);
+  titleEl.setAttribute("data-vn", doc.titleVn);
+  document.title = doc.titleEn + " — DigitalCore Team";
+  document.querySelector('meta[name="description"]').setAttribute("content", "View " + doc.titleEn + " online.");
+
+  var embed = document.getElementById("pdfEmbed");
+  embed.src = doc.file;
+  embed.type = "application/pdf";
+
+  var dl = document.getElementById("pdfDownload");
+  dl.href = doc.file;
+
+  var sizeEl = document.getElementById("docSize");
+  sizeEl.setAttribute("data-en", doc.sizeEn);
+  sizeEl.setAttribute("data-vn", doc.sizeVn);
+
+  var currentLang = "en";
+  function setLang(lang) {
+    currentLang = lang;
+    var attr = "data-" + lang;
+    document.querySelectorAll("[" + attr + "]").forEach(function (el) {
+      var txt = el.getAttribute(attr);
+      if (txt !== null && txt !== "") el.innerHTML = txt;
+    });
+    document.documentElement.lang = lang;
+    try { localStorage.setItem("dc-lang", lang); } catch (e) {}
+  }
+  var saved = null;
+  try { saved = localStorage.getItem("dc-lang"); } catch (e) {}
+  if (saved === "vn") setLang("vn");
+})();
+</script>
+</body>
+</html>

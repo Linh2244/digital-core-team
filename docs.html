@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<title>Documentation — DigitalCore Team</title>
+<meta name="description" content="Documentation for the DigitalCore knowledge platform — guides for fundamentals, security, development, and tools." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="docs.css" />
+</head>
+<body>
+
+<div class="bg-glow"></div>
+<div class="bg-grid"></div>
+<canvas id="particles"></canvas>
+
+<!-- nav -->
+<nav id="navbar">
+  <a href="index.html" class="brand">
+    <span class="brand-mark">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4v10l-9 4-9-4V7z"/><path d="M3 7l9 4 9-4"/><path d="M12 11v10"/></svg>
+    </span>
+    <span>DigitalCore<span style="color:var(--cyan)">.</span></span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html#features" data-en="Platform" data-vn="Nền tảng">Platform</a>
+    <a href="index.html#roadmap" data-en="Roadmap" data-vn="Lộ trình">Roadmap</a>
+    <a href="index.html#articles" data-en="Articles" data-vn="Bài viết">Articles</a>
+    <a href="knowledge-base.html" data-en="Knowledge" data-vn="Kiến thức">Knowledge</a>
+    <a href="docs.html" class="active" data-en="Docs" data-vn="Tài liệu">Docs</a>
+    <a href="about.html" data-en="About" data-vn="Về chúng tôi">About</a>
+    <a href="index.html#stats" data-en="Stats" data-vn="Số liệu">Stats</a>
+    <button class="lang-toggle" id="langToggle"><span class="dot"></span><span id="langLabel">VN</span></button>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html#features" data-en="Platform" data-vn="Nền tảng">Platform</a>
+  <a href="index.html#roadmap" data-en="Roadmap" data-vn="Lộ trình">Roadmap</a>
+  <a href="index.html#articles" data-en="Articles" data-vn="Bài viết">Articles</a>
+  <a href="knowledge-base.html" data-en="Knowledge" data-vn="Kiến thức">Knowledge</a>
+  <a href="docs.html" class="active" data-en="Docs" data-vn="Tài liệu">Docs</a>
+  <a href="about.html" data-en="About" data-vn="Về chúng tôi">About</a>
+  <a href="index.html#stats" data-en="Stats" data-vn="Số liệu">Stats</a>
+</div>
+
+<!-- content -->
+<div class="docs-wrap">
+  <aside class="docs-side">
+    <div class="side-group">
+      <div class="side-label" data-en="Getting Started" data-vn="Bắt đầu">Getting Started</div>
+      <a href="#introduction" class="side-link active">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+        <span data-en="Introduction" data-vn="Giới thiệu">Introduction</span>
+      </a>
+    </div>
+    <div class="side-group">
+      <div class="side-label" data-en="Platform" data-vn="Nền tảng">Platform</div>
+      <a href="knowledge-base.html" class="side-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        <span data-en="Knowledge Base" data-vn="Kho Kiến thức">Knowledge Base</span>
+      </a>
+    </div>
+  </aside>
+
+  <main class="docs-main">
+    <a href="index.html" class="doc-toplink">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      <span data-en="Back to home" data-vn="Quay lại trang chủ">Back to home</span>
+    </a>
+
+    <div class="doc-head">
+      <span class="doc-eyebrow" data-en="Documentation" data-vn="Tài liệu">Documentation</span>
+      <h1 data-en="DigitalCore Platform Docs" data-vn="Tài liệu Nền tảng DigitalCore">DigitalCore Platform Docs</h1>
+      <p data-en="Everything you need to navigate the DigitalCore knowledge platform — from core modules to lab workflows and tool references." data-vn="Mọi thứ bạn cần để làm chủ nền tảng tri thức DigitalCore — từ mô-đun cốt lõi đến quy trình phòng lab và tham khảo công cụ.">Everything you need to navigate the DigitalCore knowledge platform — from core modules to lab workflows and tool references.</p>
+    </div>
+
+    <!-- introduction -->
+    <section class="doc-section" id="introduction">
+      <h2><span class="idx" data-en="01" data-vn="01">01</span><span data-en="Introduction" data-vn="Giới thiệu">Introduction</span></h2>
+      <p data-en="DigitalCore is a digital knowledge hub focused on computer fundamentals, cybersecurity, programming, Linux, artificial intelligence, and modern technology. It is organized into four core modules that map to a structured learning path." data-vn="DigitalCore là một trung tâm tri thức số tập trung vào nền tảng máy tính, an ninh mạng, lập trình, Linux, trí tuệ nhân tạo và công nghệ hiện đại. Nền tảng được tổ chức thành bốn mô-đun cốt lõi gắn với lộ trình học có cấu trúc.">DigitalCore is a digital knowledge hub focused on computer fundamentals, cybersecurity, programming, Linux, artificial intelligence, and modern technology. It is organized into four core modules that map to a structured learning path.</p>
+      <h3 data-en="Core principles" data-vn="Nguyên tắc cốt lõi">Core principles</h3>
+      <ul>
+        <li data-en="Deep fundamentals first — understand how systems really work before building on top of them." data-vn="Nền tảng sâu trước — hiểu cách hệ thống thực sự hoạt động trước khi xây dựng phía trên.">Deep fundamentals first — understand how systems really work before building on top of them.</li>
+        <li data-en="Hands-on practice — every concept is paired with labs, challenges, and real tooling." data-vn="Thực hành tay — mọi khái niệm đi kèm phòng lab, thử thách và công cụ thực tế.">Hands-on practice — every concept is paired with labs, challenges, and real tooling.</li>
+        <li data-en="Security-minded by default — defensive thinking is applied to every layer of the stack." data-vn="Tư duy bảo mật mặc định — tư duy phòng thủ được áp dụng ở mọi lớp của hệ thống.">Security-minded by default — defensive thinking is applied to every layer of the stack.</li>
+      </ul>
+      <div class="callout">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+        <p data-en="New here? Explore the platform modules below and follow the learning roadmap to get started." data-vn="Mới bắt đầu? Khám phá các mô-đun nền tảng bên dưới và theo lộ trình học tập để bắt đầu.">New here? Explore the platform modules below and follow the learning roadmap to get started.</p>
+      </div>
+    </section>
+
+    <!-- knowledge base -->
+    <section class="doc-section" id="knowledge">
+      <h2><span class="idx" data-en="02" data-vn="02">02</span><span data-en="Knowledge Base" data-vn="Kho Kiến thức">Knowledge Base</span></h2>
+      <p data-en="Computer science, hardware, operating systems, networking, and technology fundamentals — the bedrock of every other module. Download ready-to-use reference guides and study materials here." data-vn="Khoa học máy tính, phần cứng, hệ điều hành, mạng máy tính và nền tảng công nghệ — nền móng của mọi mô-đun khác. Tải xuống sách hướng dẫn tham khảo và tài liệu học tập sẵn sàng dùng tại đây.">Computer science, hardware, operating systems, networking, and technology fundamentals — the bedrock of every other module. Download ready-to-use reference guides and study materials here.</p>
+      <div class="kb-cta">
+        <div class="txt">
+          <h4 data-en="Browse the full library" data-vn="Duyệt toàn bộ thư viện">Browse the full library</h4>
+          <p data-en="All reference guides and study materials now live on the dedicated Knowledge Base page." data-vn="Toàn bộ sách hướng dẫn và tài liệu học tập giờ nằm trên trang Kho Kiến thức chuyên dụng.">All reference guides and study materials now live on the dedicated Knowledge Base page.</p>
+        </div>
+        <a href="knowledge-base.html" class="kb-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          <span data-en="Open Knowledge Base" data-vn="Mở Kho Kiến thức">Open Knowledge Base</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  <div class="footer-bottom">
+    <span>© 2026 DigitalCore Team. <span data-en="All rights reserved." data-vn="Bảo lưu mọi quyền.">All rights reserved.</span></span>
+    <span class="status-line"><span class="led"></span><span data-en="Docs: up to date" data-vn="Tài liệu: đã cập nhật">Docs: up to date</span></span>
+    <a href="index.html" data-en="Back to home" data-vn="Quay lại trang chủ">Back to home</a>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  /* particles */
+  var canvas = document.getElementById("particles");
+  var ctx = canvas.getContext("2d");
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var W, H, parts = [], links = [], raf;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  function seed() {
+    parts = [];
+    var count = Math.min(70, Math.floor(W * H / 22000));
+    for (var i = 0; i < count; i++) {
+      parts.push({ x: Math.random() * W, y: Math.random() * H, vx: (Math.random() - 0.5) * 0.3, vy: (Math.random() - 0.5) * 0.3, r: Math.random() * 1.4 + 0.5 });
+    }
+    links = [];
+    for (var j = 0; j < count; j++) links.push({ a: j, b: Math.floor(Math.random() * count) });
+  }
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.lineWidth = 0.6;
+    for (var i = 0; i < links.length; i++) {
+      var pa = parts[links[i].a], pb = parts[links[i].b];
+      var dx = pa.x - pb.x, dy = pa.y - pb.y;
+      var dist = Math.sqrt(dx * dx + dy * dy);
+      if (dist < 170) {
+        var alpha = (1 - dist / 170) * 0.3;
+        var grad = ctx.createLinearGradient(pa.x, pa.y, pb.x, pb.y);
+        grad.addColorStop(0, "rgba(0,234,255," + alpha + ")");
+        grad.addColorStop(1, "rgba(47,123,255," + alpha + ")");
+        ctx.strokeStyle = grad;
+        ctx.beginPath(); ctx.moveTo(pa.x, pa.y); ctx.lineTo(pb.x, pb.y); ctx.stroke();
+      }
+    }
+    for (var j = 0; j < parts.length; j++) {
+      var p = parts[j];
+      p.x += p.vx; p.y += p.vy;
+      if (p.x < 0 || p.x > W) p.vx *= -1;
+      if (p.y < 0 || p.y > H) p.vy *= -1;
+      ctx.fillStyle = "rgba(0,234,255,0.5)";
+      ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2); ctx.fill();
+    }
+    raf = requestAnimationFrame(draw);
+  }
+  if (reduced) { resize(); }
+  else { resize(); seed(); draw(); }
+  window.addEventListener("resize", function () { resize(); if (reduced) return; seed(); });
+
+  /* mobile menu */
+  var burger = document.getElementById("hamburger");
+  var menu = document.getElementById("mobileMenu");
+  burger.addEventListener("click", function () {
+    burger.classList.toggle("open");
+    menu.classList.toggle("open");
+  });
+  menu.querySelectorAll("a").forEach(function (a) {
+    a.addEventListener("click", function () { burger.classList.remove("open"); menu.classList.remove("open"); });
+  });
+
+  /* sidebar scrollspy */
+  var links = document.querySelectorAll(".side-link");
+  var sections = [];
+  links.forEach(function (l) {
+    var id = l.getAttribute("href").slice(1);
+    var el = document.getElementById(id);
+    if (el) sections.push({ id: id, el: el });
+  });
+  function spy() {
+    var pos = window.scrollY + 140;
+    var current = sections[0] ? sections[0].id : null;
+    sections.forEach(function (s) {
+      if (s.el.offsetTop <= pos) current = s.id;
+    });
+    links.forEach(function (l) {
+      l.classList.toggle("active", l.getAttribute("href").slice(1) === current);
+    });
+  }
+  window.addEventListener("scroll", spy, { passive: true });
+  spy();
+
+  /* language toggle */
+  var langBtn = document.getElementById("langToggle");
+  var langLabel = document.getElementById("langLabel");
+  var currentLang = "en";
+  function setLang(lang) {
+    currentLang = lang;
+    var attr = "data-" + lang;
+    document.querySelectorAll("[" + attr + "]").forEach(function (el) {
+      var txt = el.getAttribute(attr);
+      if (txt !== null && txt !== "") el.innerHTML = txt;
+    });
+    langLabel.textContent = lang === "en" ? "VN" : "EN";
+    document.documentElement.lang = lang;
+    try { localStorage.setItem("dc-lang", lang); } catch (e) {}
+  }
+  langBtn.addEventListener("click", function () {
+    setLang(currentLang === "en" ? "vn" : "en");
+  });
+  var saved = null;
+  try { saved = localStorage.getItem("dc-lang"); } catch (e) {}
+  if (saved === "vn") setLang("vn");
+})();
+</script>
+</body>
+</html>
